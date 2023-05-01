@@ -28,10 +28,10 @@ Still and Continous mode is supported by the RS Photo app, but we recommend taki
 - Phone holder with Cold Shoe (ex. Manfrotto Mcpixi or similar)
 - Cold Shoe Mount (ex. Smallrig 761 or similar)
 
-# Requirements
+# RS Photo Converter Requirements
 
 [.NET Desktop Runtime 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-# App Links
+# Android App
 
 [RS Photo](https://play.google.com/store/apps/details?id=com.majinsoft.rsphoto)
