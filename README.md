@@ -4,7 +4,7 @@ Convert [RS Photo](https://play.google.com/store/apps/details?id=com.majinsoft.r
 
 Images can be geolocalized for photogrammetry / computer vision applications.
 
-![Screenshot](doc/Main.png)
+![Screenshot](doc/main.png)
 
 # Workflow
 
