@@ -103,9 +103,9 @@ namespace RSPhotoConverter
                 }
             }
             // TIFF Exif metadata
-            bmpMetadata.SetQuery("/ifd/exif/{ushort=37386}", _vm.Device.F);
+            bmpMetadata.SetQuery("/ifd/exif/{ushort=37386}", ExifRational(_vm.Device.F));
             bmpMetadata.SetQuery("/ifd/exif/{ushort=41989}", _vm.Device.FocalLengthIn35mmFilm.ToString());
-            bmpMetadata.SetQuery("/ifd/exif/{ushort=33437}", _vm.Device.Fstop);
+            bmpMetadata.SetQuery("/ifd/exif/{ushort=33437}", ExifRational(_vm.Device.Fstop));
             bmpMetadata.SetQuery("/ifd/{ushort=271}", _vm.Device.Maker);
             bmpMetadata.SetQuery("/ifd/{ushort=272}", _vm.Device.Model);
             // TIFF XMP metadata
@@ -116,6 +116,8 @@ namespace RSPhotoConverter
             bmpMetadata.SetQuery("/ifd/xmp/tiff:Model", _vm.Device.Model);
             return bmpMetadata;
         }
+        ulong ExifRational(uint numerator, uint denominator) => numerator | ((ulong)denominator << 32);
+        ulong ExifRational(double number) => ExifRational((uint)(number * 100), 100);
         ulong[] DecimalToDegree(double decimalAngle)
         {
             var result = new ulong[3];
